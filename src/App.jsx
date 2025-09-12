@@ -169,21 +169,21 @@ function App() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Automação Inteligente</h3>
-                <p className="text-gray-300">Ferramentas que trabalham por você 24/7</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Mapa</h3>
+                <p className="text-gray-300">Ferramentas que conectam você ao futuro econômico digital</p>
               </div>
             </div>
             
             <div className="group bg-gradient-to-br from-emerald-900/30 to-slate-800/30 p-8 rounded-3xl border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 opacity-20">
-                <img src={dataAnalysisImg} alt="Análise de Dados" className="w-full h-full object-cover" />
+                <img src={dataAnalysisImg} alt="Análise de Dado" className="w-full h-full object-cover" />
               </div>
               <div className="relative z-10 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Análise Preditiva</h3>
-                <p className="text-gray-300">Decisões baseadas em dados reais</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Toolbox 4.0</h3>
+                <p className="text-gray-300">Ferramentas inteligentes para guiar sua jornada no futuro digital</p>
               </div>
             </div>
             
@@ -195,8 +195,8 @@ function App() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">IA Cognitiva</h3>
-                <p className="text-gray-300">Amplifique sua capacidade mental</p>
+                <h3 className="text-xl font-semibold text-white mb-4">Hub de Ação</h3>
+                <p className="text-gray-300">Um laboratório aonde ideias viram decisões práticas</p>
               </div>
             </div>
           </div>
@@ -265,7 +265,7 @@ function App() {
                 <Key className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4">Vantagem Competitiva</h3>
-              <p className="text-gray-300 text-lg">Destaque-se no mundo digital</p>
+              <p className="text-gray-300 text-lg">Destaque-se em seus projetos</p>
             </div>
           </div>
         </div>
