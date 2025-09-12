@@ -373,13 +373,14 @@ function App() {
           
           {/* Imagem do Produto */}
           <div className="flex justify-center mt-16">
-            <div className="relative group">
+            {/* CORREÇÃO APLICADA AQUI */}
+            <div className="relative group w-80 rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src={newProductImg} 
                 alt="NEXUS - Interface Digital" 
-                className="w-80 h-auto mx-auto rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -400,11 +401,12 @@ function App() {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Depoimento 1 - Laptop */}
             <div className="group bg-gradient-to-br from-slate-800/60 to-blue-900/40 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-              <div className="mb-6">
+              {/* CORREÇÃO APLICADA AQUI */}
+              <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src={testimonial1Img} 
                   alt="Profissional usando NEXUS" 
-                  className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="text-center">
@@ -422,11 +424,12 @@ function App() {
             
             {/* Depoimento 2 - Mobile */}
             <div className="group bg-gradient-to-br from-emerald-900/40 to-slate-800/60 p-8 rounded-3xl border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-              <div className="mb-6">
+              {/* CORREÇÃO APLICADA AQUI */}
+              <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src={testimonial2Img} 
                   alt="NEXUS Mobile" 
-                  className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="text-center">
@@ -444,11 +447,12 @@ function App() {
             
             {/* Depoimento 3 - Tablet */}
             <div className="group bg-gradient-to-br from-blue-900/40 to-emerald-900/40 p-8 rounded-3xl border border-blue-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-              <div className="mb-6">
+              {/* CORREÇÃO APLICADA AQUI */}
+              <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src={testimonial3Img} 
                   alt="NEXUS Tablet" 
-                  className="w-full h-48 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="text-center">
@@ -495,4 +499,3 @@ function App() {
 }
 
 export default App
-
