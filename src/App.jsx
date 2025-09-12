@@ -46,9 +46,9 @@ function App() {
         
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10">
-          <img 
-            src={brainNetworkImg} 
-            alt="Neural Network Background" 
+          <img  
+            src={brainNetworkImg}  
+            alt="Neural Network Background"  
             className="w-full h-full object-cover"
           />
         </div>
@@ -62,27 +62,31 @@ function App() {
             
             {/* Logo NEXUS */}
             <div className="mb-8">
-              <img 
-                src={nexusLogoImg} 
-                alt="NEXUS Logo" 
+              <img  
+                src={nexusLogoImg}  
+                alt="NEXUS Logo"  
                 className="w-56 h-auto mx-auto mb-6"
               />
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-              <span className="text-3xl md:text-4xl lg:text-5xl text-gray-100 drop-shadow-2xl">
-                O Manual de <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">Alta Performance</span> com <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Inteligência Artificial</span>
-              </span>
+            {/* --- INÍCIO DA ALTERAÇÃO --- */}
+
+            {/* TÍTULO OTIMIZADO */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              O Manual de <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">Alta Performance</span> com <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Inteligência Artificial</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-              Na nova economia, o poder está na informação e no conhecimento. O Nexus conecta você à mentalidade e às ferramentas que transformam dados em decisões, inovação em vantagem competitiva e você em protagonista da era informacional.
+            {/* PARÁGRAFO OTIMIZADO */}
+            <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+              Domine a era da informação. O Nexus é o guia prático que transforma dados em decisões e inovação em sua maior vantagem competitiva. Torne-se o protagonista.
             </p>
+
+            {/* --- FIM DA ALTERAÇÃO --- */}
             
             {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
+              <Button  
+                size="md"  
                 className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-8 py-4 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
@@ -97,9 +101,9 @@ function App() {
       {/* Autoridade Conceitual - Caverna de Platão */}
       <section className="py-32 px-4 relative">
         <div className="absolute inset-0">
-          <img 
-            src={platosCaveImg} 
-            alt="Caverna de Platão - Era Digital" 
+          <img  
+            src={platosCaveImg}  
+            alt="Caverna de Platão - Era Digital"  
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 to-blue-900/85"></div>
@@ -300,8 +304,8 @@ function App() {
           <div className="mb-16">
             {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
+              <Button  
+                size="md"  
                 className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
@@ -369,8 +373,8 @@ function App() {
             
             {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
+              <Button  
+                size="md"  
                 className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-300 hover:to-red-400 text-white px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-orange-400/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-300/50 animate-pulse"
               >
                 <Rocket className="w-5 h-5 mr-2" />
@@ -383,9 +387,9 @@ function App() {
           {/* Imagem do Produto */}
           <div className="flex justify-center mt-16">
             <div className="relative group w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src={newProductImg} 
-                alt="NEXUS - Interface Digital" 
+              <img  
+                src={newProductImg}  
+                alt="NEXUS - Interface Digital"  
                 className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
@@ -410,9 +414,9 @@ function App() {
             {/* Depoimento 1 - Laptop */}
             <div className="group bg-gradient-to-br from-slate-800/60 to-blue-900/40 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
               <div className="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src={testimonial1Img} 
-                  alt="Profissional usando NEXUS" 
+                <img  
+                  src={testimonial1Img}  
+                  alt="Profissional usando NEXUS"  
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -432,9 +436,9 @@ function App() {
             {/* Depoimento 2 - Mobile */}
             <div className="group bg-gradient-to-br from-emerald-900/40 to-slate-800/60 p-8 rounded-3xl border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
               <div className="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src={testimonial2Img} 
-                  alt="NEXUS Mobile" 
+                <img  
+                  src={testimonial2Img}  
+                  alt="NEXUS Mobile"  
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -454,9 +458,9 @@ function App() {
             {/* Depoimento 3 - Tablet */}
             <div className="group bg-gradient-to-br from-blue-900/40 to-emerald-900/40 p-8 rounded-3xl border border-blue-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
               <div className="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src={testimonial3Img} 
-                  alt="NEXUS Tablet" 
+                <img  
+                  src={testimonial3Img}  
+                  alt="NEXUS Tablet"  
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -481,8 +485,8 @@ function App() {
             </p>
             {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
+              <Button  
+                size="md"  
                 className="bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50"
               >
                 <Rocket className="w-5 h-5 mr-2" />
