@@ -82,7 +82,7 @@ function App() {
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-6 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
+                className="h-auto whitespace-normal text-center bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-4 sm:px-6 py-3 text-sm sm:text-base font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50" // <-- CORREÇÃO AQUI
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Quero meu Manual de Alta Performance
@@ -298,10 +298,9 @@ function App() {
           
           <div className="mb-16">
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              {/* ===== BOTÃO ALTERADO PARA MENOR E CENTRALIZADO ===== */}
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-6 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
+                className="h-auto whitespace-normal text-center bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-4 sm:px-6 py-3 text-sm sm:text-base font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50" // <-- CORREÇÃO AQUI
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Quero agora meu Manual de Alta Performance com IA
@@ -367,7 +366,6 @@ function App() {
             </p>
             
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              {/* ===== BOTÃO ALTERADO PARA MENOR E CENTRALIZADO ===== */}
               <Button  
                 size="md"  
                 className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-300 hover:to-red-400 text-white px-6 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-orange-400/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-300/50 animate-pulse"
@@ -479,10 +477,9 @@ function App() {
               Junte-se a milhares de profissionais que já transformaram sua performance
             </p>
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              {/* ===== BOTÃO ALTERADO PARA MENOR E CENTRALIZADO ===== */}
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-6 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50"
+                className="h-auto whitespace-normal text-center bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-4 sm:px-6 py-3 text-sm sm:text-base font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50" // <-- CORREÇÃO AQUI
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 Começar Minha Transformação Agora
