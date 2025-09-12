@@ -36,12 +36,10 @@ function App() {
   }
 
   return (
-    // ===== CORREÇÃO 1: Adicionado "overflow-x-hidden" para evitar a barra branca =====
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 font-['Poppins',sans-serif] overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
         {/* Background Effects */}
-        {/* ===== CORREÇÃO 2: Escondendo os círculos em telas pequenas (mobile) ===== */}
         <div className="hidden md:block absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="hidden md:block absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
@@ -70,22 +68,23 @@ function App() {
               />
             </div>
             
-            {/* TÍTULO OTIMIZADO */}
-            {/* ===== CORREÇÃO 3: Adicionado "break-words" para garantir que o texto não corte ===== */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg break-words">
               O Manual de <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">Alta Performance</span> com <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Inteligência Artificial</span>
             </h1>
             
-            {/* PARÁGRAFO OTIMIZADO */}
-            <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-              Domine a era da informação. O Nexus é o guia prático que transforma dados em decisões e inovação em sua maior vantagem competitiva. Torne-se o protagonista.
-            </p>
+            {/* ===== TEXTO ALTERADO ===== */}
+            <div className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto font-light flex flex-col items-center text-center space-y-2">
+                <span>Domine a era da informação.</span>
+                <span>Transforme dados em decisões.</span>
+                <span>Faça da inovação sua maior vantagem competitiva.</span>
+                <span className="font-semibold text-cyan-400 mt-2">Torne-se o protagonista.</span>
+            </div>
             
-            {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
+              {/* ===== BOTÃO ALTERADO ===== */}
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-8 py-4 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
+                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-6 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Quero meu Manual de Alta Performance
@@ -300,11 +299,11 @@ function App() {
           </h2>
           
           <div className="mb-16">
-            {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
+              {/* ===== BOTÃO ALTERADO ===== */}
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
+                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-8 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
               >
                 <BookOpen className="w-5 h-5 mr-2" />
                 Quero agora meu Manual de Alta Performance com IA
@@ -369,11 +368,11 @@ function App() {
               👉 Toque agora e conheça o NEXUS — sua jornada para a alta performance começa hoje.
             </p>
             
-            {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
+              {/* ===== BOTÃO ALTERADO ===== */}
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-300 hover:to-red-400 text-white px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-orange-400/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-300/50 animate-pulse"
+                className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-300 hover:to-red-400 text-white px-8 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-orange-400/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-300/50 animate-pulse"
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 QUERO O NEXUS AGORA
@@ -481,11 +480,11 @@ function App() {
             <p className="text-xl text-gray-300 mb-8">
               Junte-se a milhares de profissionais que já transformaram sua performance
             </p>
-            {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
+              {/* ===== BOTÃO ALTERADO ===== */}
               <Button  
                 size="md"  
-                className="bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50"
+                className="bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-8 py-3 text-base font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50"
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 Começar Minha Transformação Agora
