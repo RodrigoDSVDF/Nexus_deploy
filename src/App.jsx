@@ -119,7 +119,7 @@ function App() {
                 <div>
                   <h3 className="text-2xl font-semibold text-white mb-3">Era Informacional</h3>
                   <p className="text-gray-200 text-lg leading-relaxed">
-                    Segundo Manuel Castells, vivemos em uma era informacional, onde a mente humana e o conhecimento são forças produtivas diretas.
+                    No atual modelo econômico informacional, a fonte real da produtividade está na tecnologia capaz de transformar dados em conhecimento, informação em estratégia e comunicação em resultados.
                   </p>
                 </div>
               </div>
