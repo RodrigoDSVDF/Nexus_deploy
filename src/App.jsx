@@ -36,13 +36,14 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 font-['Poppins',sans-serif]">
+    // ===== CORREÇÃO 1: Adicionado "overflow-x-hidden" para evitar a barra branca =====
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 font-['Poppins',sans-serif] overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-emerald-500/20"></div>
-        <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        {/* ===== CORREÇÃO 2: Escondendo os círculos em telas pequenas (mobile) ===== */}
+        <div className="hidden md:block absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="hidden md:block absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10">
@@ -69,10 +70,9 @@ function App() {
               />
             </div>
             
-            {/* --- INÍCIO DA ALTERAÇÃO --- */}
-
             {/* TÍTULO OTIMIZADO */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            {/* ===== CORREÇÃO 3: Adicionado "break-words" para garantir que o texto não corte ===== */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg break-words">
               O Manual de <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent font-extrabold">Alta Performance</span> com <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Inteligência Artificial</span>
             </h1>
             
@@ -80,8 +80,6 @@ function App() {
             <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
               Domine a era da informação. O Nexus é o guia prático que transforma dados em decisões e inovação em sua maior vantagem competitiva. Torne-se o protagonista.
             </p>
-
-            {/* --- FIM DA ALTERAÇÃO --- */}
             
             {/* LINK ADICIONADO AQUI */}
             <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
