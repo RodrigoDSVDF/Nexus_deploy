@@ -30,7 +30,6 @@ function App() {
     setIsVisible(true)
   }, [])
 
-  // Esta função não é mais necessária nos botões com link externo
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -79,17 +78,15 @@ function App() {
               Na nova economia, o poder está na informação e no conhecimento. O Nexus conecta você à mentalidade e às ferramentas que transformam dados em decisões, inovação em vantagem competitiva e você em protagonista da era informacional.
             </p>
             
-            {/* LINK ADICIONADO AQUI */}
-            <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-8 py-4 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                Quero meu Manual de Alta Performance
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
+            <Button 
+              size="md" 
+              className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-8 py-4 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
+              onClick={() => scrollToSection('cta')}
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              Quero meu Manual de Alta Performance
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </section>
@@ -298,17 +295,14 @@ function App() {
           </h2>
           
           <div className="mb-16">
-            {/* LINK ADICIONADO AQUI */}
-            <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
-                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                Quero agora meu Manual de Alta Performance com IA
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
+            <Button 
+              size="md" 
+              className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50"
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              Quero agora meu Manual de Alta Performance com IA
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </section>
@@ -367,17 +361,14 @@ function App() {
               👉 Toque agora e conheça o NEXUS — sua jornada para a alta performance começa hoje.
             </p>
             
-            {/* LINK ADICIONADO AQUI */}
-            <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
-                className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-300 hover:to-red-400 text-white px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-orange-400/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-300/50 animate-pulse"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                QUERO O NEXUS AGORA
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
+            <Button 
+              size="md" 
+              className="bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-300 hover:to-red-400 text-white px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-orange-400/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-300/50 animate-pulse"
+            >
+              <Rocket className="w-5 h-5 mr-2" />
+              QUERO O NEXUS AGORA
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
           
           {/* Imagem do Produto */}
@@ -386,6 +377,7 @@ function App() {
               <img 
                 src={newProductImg} 
                 alt="NEXUS - Interface Digital" 
+                // {/* CORREÇÃO APLICADA AQUI: Removido h-full para manter a proporção da imagem */}
                 className="w-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
@@ -409,6 +401,7 @@ function App() {
           <div className="grid md:grid-cols-3 gap-12">
             {/* Depoimento 1 - Laptop */}
             <div className="group bg-gradient-to-br from-slate-800/60 to-blue-900/40 p-8 rounded-3xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+              {/* CORREÇÃO APLICADA AQUI: Usando aspect-ratio para um contêiner responsivo */}
               <div className="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src={testimonial1Img} 
@@ -431,6 +424,7 @@ function App() {
             
             {/* Depoimento 2 - Mobile */}
             <div className="group bg-gradient-to-br from-emerald-900/40 to-slate-800/60 p-8 rounded-3xl border border-emerald-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+              {/* CORREÇÃO APLICADA AQUI: Usando aspect-ratio para um contêiner responsivo */}
               <div className="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src={testimonial2Img} 
@@ -453,6 +447,7 @@ function App() {
             
             {/* Depoimento 3 - Tablet */}
             <div className="group bg-gradient-to-br from-blue-900/40 to-emerald-900/40 p-8 rounded-3xl border border-blue-500/30 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
+              {/* CORREÇÃO APLICADA AQUI: Usando aspect-ratio para um contêiner responsivo */}
               <div className="relative w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-lg">
                 <img 
                   src={testimonial3Img} 
@@ -479,17 +474,14 @@ function App() {
             <p className="text-xl text-gray-300 mb-8">
               Junte-se a milhares de profissionais que já transformaram sua performance
             </p>
-            {/* LINK ADICIONADO AQUI */}
-            <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="md" 
-                className="bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                Começar Minha Transformação Agora
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </a>
+            <Button 
+              size="md" 
+              className="bg-gradient-to-r from-emerald-400 to-blue-500 hover:from-emerald-300 hover:to-blue-400 text-slate-900 px-10 py-5 text-lg font-bold rounded-xl shadow-2xl hover:shadow-emerald-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-emerald-300/50"
+            >
+              <Rocket className="w-5 h-5 mr-2" />
+              Começar Minha Transformação Agora
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </section>
