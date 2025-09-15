@@ -327,7 +327,7 @@ function App() {
             </p>
             
             <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-12">
-              O NEXUS é o atalho para acelerar seus resultados com Inteligência Artificial e alcançar um nível de performance que poucos ousam.
+              Pare de perder tempo com conteúdos superficiais. O NEXUS é o único conteúdo que você precisa para dominar a IA e transformar sua performance. Não é um atalho, é a rota principal para quem leva seu desenvolvimento a sério. Resultados reais:
             </p>
             
             {/* 3 Bullets dos principais ganhos */}
