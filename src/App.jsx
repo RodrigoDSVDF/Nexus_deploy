@@ -18,7 +18,7 @@ import dataAnalysisImg from './assets/1000395918.jpg'
 import ebookImg from './assets/1000393237.png'
 
 // Importando as imagens mais recentes
-import newProductImg from '.assets/1000396691.jpg'
+import newProductImg from './assets/1000396691.jpg'
 import testimonial1Img from './assets/1000396866.jpg'
 import testimonial2Img from './assets/1000396868.jpg'
 import testimonial3Img from './assets/1000396870.jpg'
