@@ -6,130 +6,115 @@ import { Link } from 'react-router-dom'
 function ProductDetails() {
   const [activeModule, setActiveModule] = useState(0)
 
+  // Módulos reestruturados com base no conteúdo do seu E-book
   const modules = [
     {
-      title: "Módulo 1: Fundamentos da Era Informacional",
+      title: "Pilar 1: Dominando a Atenção na Era do Caos",
       duration: "2 horas",
       lessons: 8,
-      description: "Compreenda os pilares do modelo econômico informacional e como se posicionar estrategicamente nesta nova era.",
+      description: "Aprenda a combater a 'pobreza de atenção' e a 'amnésia digital'. Este pilar é sua fundação para transformar o excesso de informação em foco e clareza.",
       topics: [
-        "O que é a Era Informacional",
-        "Diferenças entre Era Industrial e Informacional",
-        "Como a informação se tornou o novo capital",
-        "Identificando oportunidades no mercado digital",
-        "Mindset para a transformação digital",
-        "Casos de sucesso na economia informacional",
-        "Preparando-se para o futuro do trabalho",
-        "Exercícios práticos de aplicação"
+        "A Crise da Atenção no Século XXI: Causas e Consequências",
+        "O 'Efeito Google': Como a tecnologia molda nossa memória",
+        "Infobesidade: Estratégias para lidar com a sobrecarga cognitiva",
+        "O Mito da Multitarefa: Os custos reais da alternância de tarefas",
+        "Deep Work: Como cultivar a concentração profunda e ininterrupta",
+        "Saindo da Caverna Digital: Superando a desinformação",
+        "Mindfulness e Higiene Mental para o mundo digital",
+        "Construindo um ambiente que protege seu foco"
       ]
     },
     {
-      title: "Módulo 2: Inteligência Artificial na Prática",
+      title: "Pilar 2: A IA como Ferramenta de Transformação",
       duration: "3 horas",
       lessons: 12,
-      description: "Domine as principais ferramentas de IA e aprenda a aplicá-las para maximizar sua produtividade e resultados.",
+      description: "Desmistifique a Inteligência Artificial e transforme-a em sua maior aliada para criatividade e produtividade, sem abrir mão do pensamento crítico.",
       topics: [
-        "Introdução às principais IAs do mercado",
-        "ChatGPT: técnicas avançadas de prompt",
-        "Claude: análise e síntese de documentos",
-        "Midjourney: criação de imagens profissionais",
-        "Notion AI: organização inteligente",
-        "Automações com IA para tarefas repetitivas",
-        "Integração de múltiplas IAs em workflows",
-        "Ética e limitações da IA",
-        "Criando seu assistente pessoal com IA",
-        "Análise de dados com IA",
-        "IA para tomada de decisões",
-        "Projeto prático: implementando IA no seu trabalho"
+        "A Origem da IA: Dos anos 40 aos LLMs de hoje",
+        "Ampliando a Mente, Não Substituindo-a: O uso consciente da IA",
+        "Engenharia de Prompt: A arte de fazer as perguntas certas",
+        "Personalizando o ChatGPT: Crie seu assistente pessoal",
+        "Dominando Ferramentas Essenciais: DeepSeek, Perplexity e mais",
+        "Automação Inteligente para tarefas repetitivas",
+        "IA para Análise de Dados e Tomada de Decisão",
+        "Criatividade e Autenticidade na Era da IA Generativa",
+        "Filosofia Prática: Sartre e a liberdade em um mundo de máquinas",
+        "Krishnamurti: Cultivando a inteligência humana não mecânica",
+        "A Lei dos Retornos Acelerados de Kurzweil",
+        "Projeto Prático: Integrando a IA no seu fluxo de trabalho"
       ]
     },
     {
-      title: "Módulo 3: Produtividade Exponencial",
+      title: "Pilar 3: Produtividade e Organização de Alta Performance",
       duration: "2.5 horas",
       lessons: 10,
-      description: "Desenvolva sistemas e metodologias para alcançar níveis extraordinários de produtividade e eficiência.",
+      description: "Estruture sua vida e seus projetos com sistemas comprovados, adaptados para a complexidade da era informacional e potencializados pela tecnologia.",
       topics: [
-        "Princípios da produtividade exponencial",
-        "Método GTD adaptado para a era digital",
-        "Time blocking e gestão de energia",
-        "Eliminando distrações digitais",
-        "Técnicas de foco profundo",
-        "Automação de processos pessoais",
-        "Criando rotinas de alta performance",
-        "Medindo e otimizando resultados",
-        "Batching: agrupamento de tarefas similares",
-        "Sistema de revisão e melhoria contínua"
+        "Arquitetura de Informação Pessoal: O fim da bagunça digital",
+        "Construindo seu 'Segundo Cérebro' com ferramentas inteligentes",
+        "Método GTD aplicado à Era da IA",
+        "Time Blocking e Gestão de Energia (não apenas de tempo)",
+        "Templates e Processos para máxima eficiência",
+        "Como a IA pode organizar seus projetos e conhecimento",
+        "Criando Rotinas de Alta Performance que realmente funcionam",
+        "Sistema de Revisão Semanal para melhoria contínua",
+        "Eliminando a paralisia por análise",
+        "Organização de projetos complexos com clareza"
       ]
     },
     {
-      title: "Módulo 4: Organização de Alta Performance",
-      duration: "2 horas",
-      lessons: 8,
-      description: "Estruture seus materiais, projetos e conhecimento de forma sistemática para máxima eficiência.",
-      topics: [
-        "Arquitetura de informação pessoal",
-        "Sistema de arquivos e pastas otimizado",
-        "Gestão de conhecimento com Second Brain",
-        "Ferramentas de captura e organização",
-        "Criando templates reutilizáveis",
-        "Backup e sincronização de dados",
-        "Organização de projetos complexos",
-        "Mantendo a organização a longo prazo"
-      ]
-    },
-    {
-      title: "Módulo 5: Estratégia e Tomada de Decisão",
+      title: "Pilar 4: Estratégia, Inovação e Vantagem Competitiva",
       duration: "2.5 horas",
       lessons: 9,
-      description: "Desenvolva frameworks mentais para tomar decisões estratégicas precisas e construir vantagem competitiva.",
+      description: "Desenvolva os frameworks mentais para se destacar. Aprenda a transformar informação em estratégia e a construir seu diferencial no mercado.",
       topics: [
-        "Frameworks de tomada de decisão",
-        "Análise de cenários e probabilidades",
-        "Pensamento sistêmico aplicado",
-        "Identificando padrões e tendências",
-        "Construindo vantagem competitiva sustentável",
-        "Estratégias de diferenciação no mercado",
-        "Networking estratégico na era digital",
-        "Posicionamento pessoal e profissional",
-        "Plano de ação para implementação"
+        "O Paradigma Informacional: A nova fonte de poder e produtividade",
+        "Como a Mente Humana se torna uma força direta de produção",
+        "Frameworks para Tomada de Decisão em cenários complexos",
+        "Análise de Tendências e Padrões com auxílio da IA",
+        "Construindo sua Vantagem Competitiva Sustentável",
+        "Posicionamento Profissional na Economia da Atenção",
+        "Networking Estratégico na Sociedade em Rede",
+        "Inovação Contínua: Como se manter sempre à frente",
+        "Do Conhecimento à Ação: Um plano prático"
       ]
     },
     {
-      title: "Módulo 6: Implementação e Resultados",
-      duration: "1.5 horas",
+      title: "Pilar 5: O Futuro do Trabalho e da Educação",
+      duration: "2 horas",
       lessons: 6,
-      description: "Coloque tudo em prática com um plano de implementação estruturado e métricas de acompanhamento.",
+      description: "Prepare-se para as transformações que já estão acontecendo. Entenda o novo mercado e como a IA está revolucionando a forma como aprendemos e evoluímos.",
       topics: [
-        "Criando seu plano de implementação",
-        "Definindo métricas de sucesso",
-        "Cronograma de 90 dias",
-        "Superando obstáculos comuns",
-        "Mantendo a consistência",
-        "Evoluindo continuamente"
+        "O Impacto da IA no Mercado de Trabalho: Ameaças e Oportunidades",
+        "Porque o conhecimento em IA aumenta suas chances de promoção",
+        "Desenvolvendo as Competências do Futuro (Criatividade, Crítica, Adaptação)",
+        "A IA como Pilar para uma Aprendizagem Personalizada",
+        "Agentes de IA: A revolução silenciosa que já está ao nosso alcance",
+        "Construindo seu Plano de Desenvolvimento para o Futuro"
       ]
     }
   ]
 
   const benefits = [
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Produtividade 10x",
-      description: "Aumente exponencialmente sua capacidade de entrega"
+      icon: <Brain className="w-6 h-6" />,
+      title: "Amplie Sua Mente",
+      description: "Use a IA para expandir sua criatividade e resolver problemas, sem perder sua autonomia e pensamento crítico."
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Clareza Mental",
-      description: "Tome decisões mais rápidas e precisas"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Produtividade Consciente",
+      description: "Liberte-se de tarefas repetitivas para focar no que realmente importa: criar, inovar e evoluir."
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Foco Estratégico",
-      description: "Concentre energia no que realmente importa"
+      title: "Clareza na Era do Caos",
+      description: "Supere a 'infoxicação' e a 'pobreza de atenção' com estratégias para um futuro focado e com propósito."
     },
     {
       icon: <Star className="w-6 h-6" />,
-      title: "Vantagem Competitiva",
-      description: "Destaque-se no mercado com diferenciais únicos"
+      title: "Vantagem Profissional",
+      description: "Posicione-se como um líder na nova era informacional, dominando as competências mais valorizadas pelo mercado."
     }
   ]
 
@@ -158,15 +143,15 @@ function ProductDetails() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-flex items-center px-6 py-3 bg-emerald-500/20 border border-emerald-400/30 rounded-full text-emerald-300 text-sm font-medium mb-8">
             <BookOpen className="w-4 h-4 mr-2" />
-            Conteúdo Completo do Manual
+            Uma Jornada de Capacitação
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Descubra o que você vai <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">dominar</span>
+            Não apenas use IA. <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Torne-se mais humano</span> com ela.
           </h1>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Um guia completo e estruturado para transformar sua performance pessoal e profissional através da Inteligência Artificial
+            Este manual é um guia para transformar a Inteligência Artificial em uma ferramenta de capacitação, ajudando você a prosperar na complexidade da Era da Informação.
           </p>
 
           <div className="grid md:grid-cols-4 gap-8 mb-16">
@@ -188,10 +173,10 @@ function ProductDetails() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">6 Módulos Completos</span>
+              Os <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">5 Pilares da Alta Performance</span> na Era Digital
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Mais de 12 horas de conteúdo estruturado, com 53 lições práticas e aplicáveis
+              Uma jornada estruturada que vai da filosofia à prática, mostrando como usar a tecnologia a favor do seu desenvolvimento.
             </p>
           </div>
 
@@ -248,7 +233,7 @@ function ProductDetails() {
                   </div>
                 </div>
 
-                <h4 className="text-xl font-semibold text-white mb-4">O que você vai aprender:</h4>
+                <h4 className="text-xl font-semibold text-white mb-4">O que você vai dominar neste pilar:</h4>
                 <div className="grid md:grid-cols-2 gap-3">
                   {modules[activeModule].topics.map((topic, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -267,10 +252,10 @@ function ProductDetails() {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Pronto para transformar sua <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">performance</span>?
+            Pronto para ser o <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">protagonista do futuro</span>?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Mais de 12 horas de conteúdo prático, 53 lições estruturadas e acesso vitalício
+            Adquira o conhecimento necessário para transformar sua performance e se destacar em um mundo em constante mudança.
           </p>
           
           <div className="bg-gradient-to-r from-blue-900/30 to-emerald-900/30 p-8 rounded-3xl border border-blue-500/20 mb-8">
@@ -278,24 +263,24 @@ function ProductDetails() {
               <span className="text-4xl font-bold text-white">R$ 97</span>
               <span className="text-gray-400 ml-2">pagamento único</span>
             </div>
-            <div className="flex items-center justify-center space-x-6 text-gray-300 mb-6">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6 text-gray-300 mb-6">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-emerald-400 mr-2" />
-                <span>6 módulos completos</span>
+                <span>5 Pilares de Conteúdo Profundo</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-emerald-400 mr-2" />
-                <span>53 lições práticas</span>
+                <span>Estratégias Práticas e Aplicáveis</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-emerald-400 mr-2" />
-                <span>Acesso vitalício</span>
+                <span>Acesso vitalício ao Manual</span>
               </div>
             </div>
           </div>
 
           <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 px-8 py-4 text-lg font-bold rounded-xl shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300 transform hover:scale-105 border-2 border-cyan-300/50">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 transform hover:scale-105 border-2 border-orange-400/50 animate-pulse">
               <BookOpen className="w-6 h-6 mr-3" />
               Quero o Manual NEXUS Agora
             </Button>
@@ -311,4 +296,3 @@ function ProductDetails() {
 }
 
 export default ProductDetails
-
