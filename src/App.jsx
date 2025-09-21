@@ -30,6 +30,7 @@ import orgImg from './assets/org.jpg';
 import garantiaImg from './assets/7-dias-garantido1.jpg';
 import novaImagemLogo from './assets/1000393277.png';
 
+// Substitua a função HomePage inteira por esta:
 function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -72,9 +73,11 @@ function HomePage() {
               </a>
             </div>
 
+            {/* Mobile Menu Button - CORREÇÃO APLICADA AQUI */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden text-white"
+              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"} // Adicionamos a etiqueta acessível
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -115,8 +118,11 @@ function HomePage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+      {/* O resto do seu código da HomePage continua aqui... */}
+      {/* ... Hero Section ... */}
+      {/* ... Autoridade Conceitual ... */}
+      {/* ... etc ... */}
+       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
         <div className="hidden md:block absolute top-20 left-20 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="hidden md:block absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
@@ -329,9 +335,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* ======================================================================= */}
-      {/* ======================= SEÇÃO DE PROVA SOCIAL ========================= */}
-      {/* ======================================================================= */}
       <section id="depoimentos" className="py-32 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
@@ -344,7 +347,6 @@ function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Depoimento 1 */}
             <div className="bg-slate-800/50 p-8 rounded-2xl border border-blue-500/20 flex flex-col items-center text-center">
               <img src={testimonial1Img} alt="Depoimento de Aluno 1" className="w-20 h-20 rounded-full border-2 border-cyan-400 mb-6" />
               <p className="text-gray-300 italic mb-6">
@@ -356,7 +358,6 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Depoimento 2 */}
             <div className="bg-slate-800/50 p-8 rounded-2xl border border-blue-500/20 flex flex-col items-center text-center">
               <img src={testimonial2Img} alt="Depoimento de Aluno 2" className="w-20 h-20 rounded-full border-2 border-cyan-400 mb-6" />
               <p className="text-gray-300 italic mb-6">
@@ -368,7 +369,6 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Depoimento 3 */}
             <div className="bg-slate-800/50 p-8 rounded-2xl border border-blue-500/20 flex flex-col items-center text-center">
               <img src={testimonial3Img} alt="Depoimento de Aluno 3" className="w-20 h-20 rounded-full border-2 border-cyan-400 mb-6" />
               <p className="text-gray-300 italic mb-6">
