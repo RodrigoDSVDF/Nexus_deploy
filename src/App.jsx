@@ -28,6 +28,8 @@ import redeNeuralAbstrataImg from './assets/rede-neural-abstrata.jpg';
 import xadrezStrategiaImg from './assets/xadrez-estrategia.jpg';
 import orgImg from './assets/org.jpg';
 import garantiaImg from './assets/7-dias-garantido1.jpg';
+// --- NOVA IMAGEM ADICIONADA AQUI ---
+import novaImagemLogo from './assets/1000393277.png';
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -48,7 +50,8 @@ function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img src={nexusLogoImg} alt="NEXUS Logo" className="w-10 h-10" />
+              {/* --- IMAGEM DO LOGO ATUALIZADA AQUI --- */}
+              <img src={novaImagemLogo} alt="NEXUS Logo" className="w-10 h-10 rounded-full" />
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
                 NEXUS
               </span>
@@ -61,6 +64,10 @@ function HomePage() {
               </Link>
               <Link to="/faq" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 FAQ
+              </Link>
+              {/* --- LINK 'QUEM SOMOS' ADICIONADO --- */}
+              <Link to="/quem-somos" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Quem Somos
               </Link>
               <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 font-semibold">
@@ -95,6 +102,14 @@ function HomePage() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   FAQ
+                </Link>
+                {/* --- LINK 'QUEM SOMOS' ADICIONADO NO MENU MOBILE --- */}
+                <Link 
+                  to="/quem-somos" 
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Quem Somos
                 </Link>
                 <a href="https://pay.cakto.com.br/5dUKrWD" target="_blank" rel="noopener noreferrer">
                   <Button size="sm" className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-900 font-semibold w-full">
@@ -361,7 +376,7 @@ function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img src={nexusLogoImg} alt="NEXUS Logo" className="w-10 h-10" />
+                <img src={novaImagemLogo} alt="NEXUS Logo" className="w-10 h-10 rounded-full" />
                 <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
                   NEXUS
                 </span>
@@ -379,6 +394,10 @@ function HomePage() {
                 </Link>
                 <Link to="/faq" className="block text-gray-400 hover:text-cyan-400 transition-colors">
                   Perguntas Frequentes
+                </Link>
+                {/* --- LINK 'QUEM SOMOS' ADICIONADO NO RODAPÉ --- */}
+                <Link to="/quem-somos" className="block text-gray-400 hover:text-cyan-400 transition-colors">
+                  Quem Somos
                 </Link>
               </div>
             </div>
@@ -408,10 +427,9 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/detalhes" element={<ProductDetails />} />
       <Route path="/faq" element={<FAQ />} />
-      <Route path="/quem-somos" element={<QuemSomos />} /> {/* <-- ADICIONE ESTA LINHA */}
+      <Route path="/quem-somos" element={<QuemSomos />} />
     </Routes>
   )
 }
 
 export default App
-
