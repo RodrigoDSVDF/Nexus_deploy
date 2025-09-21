@@ -12,7 +12,7 @@ export default defineConfig({
   base: '/Nexus_deploy/',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './sr
+      '@': path.resolve(__dirname, './src'),
     },
   },
 })
