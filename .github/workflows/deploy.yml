@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ['main'] # Mude para o nome da sua branch principal se for diferente
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,41 +22,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # --- ALTERAÇÃO APLICADA AQUI ---
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          version: 8
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
+          node-version: 18
+      # Use pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
-          node-version: '18.x' # Usar '18.x' é uma boa prática
-          cache: 'pnpm'
-      # --- FIM DA ALTERAÇÃO ---
-
-      - name: Install dependencies
-        run: pnpm install
-        
+          version: 8 # ou a versão do pnpm que você usa
+          run_install: true
       - name: Build
-        run: pnpm run build
-        
+        run: pnpm run build # Certifique-se que este é o comando de build no seu package.json
       - name: Setup Pages
-        uses: actions/configure-pages@v5
-        
+        uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload a pasta 'dist' que o Vite gera
+          # Upload entire repository
           path: './dist'
-          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
