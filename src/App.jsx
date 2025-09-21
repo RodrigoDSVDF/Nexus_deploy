@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button.jsx'
 import { ArrowRight, Zap, Target, Globe, Key, Rocket, BookOpen, Brain, TrendingUp, CheckCircle, Sparkles, LayoutList, Menu, X } from 'lucide-react'
+import QuemSomos from './pages/QuemSomos.jsx'
 import ProductDetails from './pages/ProductDetails.jsx'
 import FAQ from './pages/FAQ.jsx'
 import './App.css'
@@ -407,6 +408,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/detalhes" element={<ProductDetails />} />
       <Route path="/faq" element={<FAQ />} />
+      <Route path="/quem-somos" element={<QuemSomos />} /> {/* <-- ADICIONE ESTA LINHA */}
     </Routes>
   )
 }
